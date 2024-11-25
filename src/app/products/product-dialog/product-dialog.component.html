@@ -1,0 +1,83 @@
+<div class="container">
+  <h1 mat-dialog-title>
+    {{ productData?.productName ? "Edit Product" : "Add Product" }}
+  </h1>
+
+  <form [formGroup]="productForm">
+    <div mat-dialog-content>
+      <mat-form-field appearance="outline">
+        <mat-label>Product Name</mat-label>
+        <input matInput formControlName="productName" required />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Model</mat-label>
+        <input matInput formControlName="model" required />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Description</mat-label>
+        <textarea matInput formControlName="description"></textarea>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Category</mat-label>
+        <mat-select formControlName="categoryId">
+          <mat-option *ngFor="let category of categories" [value]="category.id">
+            {{ category.name }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Subcategory</mat-label>
+        <mat-select formControlName="subcategoryId">
+          <mat-option
+            *ngFor="let subcategory of subcategories"
+            [value]="subcategory.id"
+          >
+            {{ subcategory.name }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <div>
+        <mat-label>Upload Image</mat-label>
+        <input type="file" (change)="onFileSelected($event)" />
+      </div>
+
+      <h3>Stock Details</h3>
+
+      <div formGroupName="stock">
+        <mat-form-field appearance="outline">
+          <mat-label>Size</mat-label>
+          <input matInput formControlName="size" required />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Price</mat-label>
+          <input matInput formControlName="price" type="number" required />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Color</mat-label>
+          <input matInput formControlName="color" required />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Total Quantity</mat-label>
+          <input
+            matInput
+            formControlName="totalQuantity"
+            type="number"
+            required
+          />
+        </mat-form-field>
+      </div>
+    </div>
+  </form>
+
+  <div mat-dialog-actions>
+    <button mat-button mat-dialog-close>Cancel</button>
+    <button mat-button (click)="submitProductData()">Submit</button>
+  </div>
+</div>

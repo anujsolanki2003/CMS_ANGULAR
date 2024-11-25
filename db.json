@@ -1,0 +1,25 @@
+{
+  "users": [
+    {
+      "id": "6f25",
+      "firstName": "Anuj ",
+      "lastName": "solanki",
+      "email": "admin@gmail.com",
+      "role": "admin"
+    },
+    {
+      "id": "9e3b",
+      "firstName": "amit",
+      "lastName": "pal",
+      "email": "amit@gmail.com",
+      "role": "user"
+    },
+    {
+      "id": "7b30",
+      "firstName": "nitin",
+      "lastName": "dhyani",
+      "email": "nitindhyani@gmail.com",
+      "role": "User"
+    }
+  ]
+}

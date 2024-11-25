@@ -1,0 +1,25 @@
+<h2>Your Products</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Image</th>
+      <th>Product Name</th>
+      <th>Model</th>
+      <th>Description</th>
+      <th>Color</th>
+      <th>Price</th>
+      <th>Stock</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of userProducts">
+      <td><img [src]="item.img" alt="Product Image" width="80" /></td>
+      <td>{{ item.name }}</td>
+      <td>{{ item.model }}</td>
+      <td>{{ item.description }}</td>
+      <td>{{ item.color }}</td>
+      <td>{{ item.price | currency }}</td>
+      <td>{{ item.stock }}</td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,107 @@
+<div class="main-container">
+  <h2 class="title">Manage Categories</h2>
+
+  <div class="button-container">
+    <button
+      mat-raised-button
+      style="background-color: #f0a400; color: whitesmoke"
+      class="add-cat"
+      (click)="openAddCategoryDialog()"
+    >
+      Add Category
+    </button>
+  </div>
+
+  <div class="table-container">
+    <table mat-table [dataSource]="categories" class="mat-elevation-z8">
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef>Category Name</th>
+        <td mat-cell *matCellDef="let category">{{ category.name }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="addedBy">
+        <th mat-header-cell *matHeaderCellDef>Added By</th>
+        <td mat-cell *matCellDef="let category">{{ category.addedBy }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef>Actions</th>
+        <td mat-cell *matCellDef="let category">
+          <button mat-icon-button (click)="editCategory(category)">
+            <mat-icon class="edit-icon">edit</mat-icon>
+          </button>
+          <button mat-icon-button (click)="deleteCategory(category.id)">
+            <mat-icon class="delete-icon">delete</mat-icon>
+          </button>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="['name', 'addedBy', 'actions']"></tr>
+      <tr
+        mat-row
+        *matRowDef="let row; columns: ['name', 'addedBy', 'actions']"
+      ></tr>
+    </table>
+  </div>
+
+  <!-- Subcategory Section -->
+  <h2 class="sub-title">Manage Subcategories</h2>
+
+  <div class="button-container">
+    <button
+      mat-raised-button
+      style="background-color: #f0a400; color: whitesmoke"
+      class="add-subcat"
+      (click)="openAddSubcategoryDialog()"
+    >
+      Add Subcategory
+    </button>
+  </div>
+
+  <div class="table-container">
+    <table mat-table [dataSource]="subcategories" class="mat-elevation-z8">
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef>Subcategory Name</th>
+        <td mat-cell *matCellDef="let subcategory">{{ subcategory.name }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="categoryName">
+        <th mat-header-cell *matHeaderCellDef>Category Name</th>
+        <td mat-cell *matCellDef="let subcategory">
+          {{ subcategory.category?.name }}
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="addedBy">
+        <th mat-header-cell *matHeaderCellDef>Added By</th>
+        <td mat-cell *matCellDef="let subcategory">
+          {{ subcategory.addedBy }}
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef>Actions</th>
+        <td mat-cell *matCellDef="let subcategory">
+          <button mat-icon-button (click)="editSubcategory(subcategory)">
+            <mat-icon class="edit-icon">edit</mat-icon>
+          </button>
+          <button mat-icon-button (click)="deleteSubcategory(subcategory.id)">
+            <mat-icon class="delete-icon">delete</mat-icon>
+          </button>
+        </td>
+      </ng-container>
+
+      <tr
+        mat-header-row
+        *matHeaderRowDef="['name', 'categoryName', 'addedBy', 'actions']"
+      ></tr>
+      <tr
+        mat-row
+        *matRowDef="
+          let row;
+          columns: ['name', 'categoryName', 'addedBy', 'actions']
+        "
+      ></tr>
+    </table>
+  </div>
+</div>

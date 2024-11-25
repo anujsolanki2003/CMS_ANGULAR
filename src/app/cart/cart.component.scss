@@ -1,0 +1,33 @@
+$table-border-color: #ddd;
+$table-header-bg: #f4f4f4;
+$font-size-large: 18px;
+$img-border-radius: 8px;
+$table-padding: 8px;
+
+h2{
+    text-align: center;
+    color: #f0a400 ;
+    font-weight: 500;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: $font-size-large;
+  text-align: left;
+
+  th, td {
+    border: 1px solid $table-border-color;
+    padding: $table-padding;
+  }
+
+  th {
+    background-color: $table-header-bg;
+    font-weight: 500;
+  }
+
+  td img {
+    border-radius: $img-border-radius;
+  }
+}

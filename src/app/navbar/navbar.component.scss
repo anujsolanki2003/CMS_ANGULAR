@@ -1,0 +1,104 @@
+.wrapper {
+    display: flex;
+    min-height: 100vh;
+  }
+  
+  #sidebar {
+    width: 180px;
+    position: fixed;
+   
+    top: -10;
+    left: 0;
+    height: 100vh;
+    background: #505052; 
+    color: #f0a400;
+    // padding-top: 20px;
+    margin-top: 30px;
+    
+  }
+  #sidebar h3{
+    color: #f0a400;
+    
+  }
+  
+  #sidebar .sidebar-header {
+    padding: 20px;
+   
+    background: none;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+  }
+  
+  #sidebar ul {
+    padding: 0;
+    list-style: none;
+  }
+  
+  #sidebar ul li a {
+    padding: 5px;
+    margin:10px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    color: white;
+    transition: 0.3s;
+    
+  }
+  
+  #sidebar ul li a:hover {
+    background: #f0a400;
+    // padding: 20px;
+    border-radius: 10px;
+  }
+  
+  #content {
+    flex-grow: 1;
+    margin-left: 250px;
+    padding: 20px;
+  }
+  
+  .navbar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #505052 !important;
+    
+    
+  }
+  .navbar a {
+    color: #f0a400;
+   
+  }
+  .navbar a:hover{
+    background-color: #505052;
+    color: whitesmoke;
+    border-radius: 20px;
+  }
+  
+  .container-fluid {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .navbar-nav.ml-auto {
+    display: flex;
+    margin-left: auto;
+  }
+  
+  .container {
+    padding-top: 70px;
+  }
+ .dropdown-menu{
+  border-radius: 10px;
+  border-width: 1px;
+  width: 80px;
+  text-align: center;
+
+ }
+
+.dropdown-item{
+  cursor: pointer;
+}

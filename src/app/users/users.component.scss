@@ -1,0 +1,60 @@
+.user-container {
+  margin-right: 55px;
+  overflow: hidden;
+
+  h2 {
+    text-align: center;
+    color: #f0a400;
+  }
+
+  .add-user {
+    color: aliceblue; 
+    background-color: #f0a400;
+
+    &:disabled {
+      color: grey; 
+      background-color: lightgray; 
+      cursor: not-allowed; 
+    }
+  }
+
+  .user-table-container {
+    max-height: 400px; 
+    overflow-y: auto; 
+  }
+
+  table {
+    width: 100%;
+    table-layout: fixed;
+
+    th, td {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+
+  .edit-button {
+    color: green;
+
+    &:disabled {
+      color: lightgray; 
+      cursor: not-allowed; 
+    }
+  }
+
+  .delete-button {
+    color: red;
+
+    &:disabled {
+      color: lightgray; 
+      cursor: not-allowed; 
+    }
+  }
+}
+
+.no-users {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,83 @@
+/* Styling for the dialog title */
+.container {
+    margin-top: 40px; /* Space from the header */
+  }
+  
+  h1[mat-dialog-title] {
+    font-size: 24px;
+    font-weight: 500;
+    margin-top: 25px; 
+    margin-bottom: 20px; /* Space below the title */
+    color: #f0a400; 
+    text-align: center; 
+  }
+  
+  /* Add margin to the top of the product dialog */
+  div[mat-dialog-content] {
+    margin-top: 20px; /* Space above the content */
+    padding-top: 10px; /* Space inside the content */
+  }
+  
+  /* Styling for the form */
+  form {
+    display: flex;
+    flex-direction: column;
+  
+    mat-form-field {
+      width: 100%;
+      margin-bottom: 8px; /* Reduced bottom margin */
+    }
+  }
+  
+  /* Styling for the dialog content */
+  div[mat-dialog-content] {
+    display: flex;
+    flex-direction: column;
+    gap: 8px; /* Reduced gap between form elements */
+  }
+  
+  /* Styling for stock section */
+  h3 {
+    text-align: center;
+    margin-top: 24px; /* Space above the stock details */
+    margin-bottom: 16px; /* Space below the stock details */
+    font-size: 20px;
+    font-weight: 500;
+    color: #f0a400; 
+  }
+  
+  /* Grouping fields inside the stock form group */
+  div[formGroupName="stock"] {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  /* Button styles */
+  div[mat-dialog-actions] {
+    display: flex;
+    justify-content: center; /* Center the buttons */
+    margin-top: 16px;
+  
+    button {
+      min-width: 100px;
+      margin-left: 8px;
+    }
+    button.mat-button {
+        background-color: green; /* Change to your desired color */
+        color: white;
+      }
+
+      button.mat-dialog-close {
+        background-color: #f44336; /* Red color */
+        color: white;
+      }
+  }
+  
+  
+ 
+  

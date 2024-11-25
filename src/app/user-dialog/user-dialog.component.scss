@@ -1,0 +1,48 @@
+h2 {
+  margin: 10px 0; // Space above and below the title
+}
+
+.dialog-form {
+  width: 400px; 
+  display: flex;
+  flex-direction: column;
+  gap: 4px; // Space between fields
+  padding: 0 16px; 
+}
+
+.mat-form-field {
+  margin: 0; // Remove any margin
+  padding: 0; // Remove padding around the form field
+  height: auto; // Set to auto for minimal height
+}
+
+.mat-form-field input {
+  padding: 4px; // Small internal padding
+  height: 32px; // Fixed height for consistency
+  background-color: rgb(8, 5, 5);
+  border-radius: 4px; // Optional: rounding corners
+  font-size: 14px; // Control font size
+}
+
+.mat-form-field mat-label {
+  font-size: 14px; // Label size for compactness
+  line-height: 1; // Reduce line height for a tighter look
+}
+
+.mat-dialog-actions {
+  display: flex;
+  width: 100%; 
+  gap: 4px; // Space between buttons
+}
+
+.cancel-button {
+  flex: 1;
+  background-color: red;
+  color: white;
+}
+
+.submit-button {
+  flex: 1;
+  background-color: green;
+  color: white;
+}

@@ -1,0 +1,59 @@
+.products-container {
+  position: relative;
+  padding: 20px;
+  min-height: 100vh; 
+
+  button[mat-raised-button] {
+    position: absolute;
+    top: 20px; 
+    right: 20px; 
+    margin-bottom: 20px;
+    background-color: #f0a400; 
+    color: whitesmoke; 
+  }
+
+  
+  table {
+    width: 100%;
+    margin-top: 60px; 
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-spacing: 0;
+    display: block; 
+
+    
+    max-height: 400px; 
+    overflow-y: auto; 
+
+    thead, tbody {
+      display: table; 
+      width: 100%; 
+      table-layout: fixed; 
+    }
+
+    th, td {
+      padding: 16px;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    tr:hover {
+      background-color: #f9f9f9;
+    }
+
+    img {
+      border-radius: 4px;
+      object-fit: cover;
+    }
+
+    @media (max-width: 768px) {
+      th, td {
+        padding: 8px;
+      }
+    }
+  }
+}
+.action-buttons {
+  display: flex; 
+  align-items: center; 
+  gap: 8px; 
+}

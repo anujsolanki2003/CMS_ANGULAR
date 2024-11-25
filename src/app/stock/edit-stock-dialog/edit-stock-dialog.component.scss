@@ -1,0 +1,64 @@
+// Main container for the dialog
+mat-dialog-content {
+    padding: 20px; 
+    
+  }
+  
+  // Title styling
+  h2[mat-dialog-title] {
+    color: #f0a400  ; 
+    text-align: center; 
+    font-size: 24px; 
+    font-weight: 500; 
+    margin-bottom: 20px; 
+    margin-top: 40px;
+  }
+  
+  // Styling for the form fields
+  mat-form-field {
+    width: 100%; 
+    margin-bottom: 16px; 
+  
+    
+    
+    // Custom styles for input
+    input.mat-input-element {
+      padding: 10px; 
+    }
+  }
+  
+  // Error message styling
+  mat-error {
+    color: red; 
+    font-size: 12px; 
+  }
+  
+  // Dialog actions styling
+  mat-dialog-actions {
+    display: flex;
+    justify-content: center; 
+    margin-top: 20px; 
+    
+    button {
+      background-color: green; 
+      color: white; 
+      border: none; 
+      margin: 0 8px; 
+      gap: 600px;
+      margin-bottom: 20px;
+      
+      &:hover {
+        background-color: darkgreen; 
+      }
+    }
+    
+    // Cancel button specific styles
+    button[mat-dialog-close] {
+      background-color: #f44336; 
+      
+      &:hover {
+        background-color: #d32f2f; 
+      }
+    }
+  }
+  
